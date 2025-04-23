@@ -23,25 +23,27 @@ const Header = () => {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link to="/">
-                <NavigationMenuLink className={cn(
+              {/* Исправлено: использование NavigationMenuLink напрямую вместо вложения в Link */}
+              <NavigationMenuLink asChild>
+                <Link to="/" className={cn(
                   "flex items-center px-4 py-2 text-white hover:text-[#D6BCFA] transition-colors"
                 )}>
                   <Home className="mr-1 h-4 w-4" />
                   Главная
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link to="/cybersport">
-                <NavigationMenuLink className={cn(
+              {/* Исправлено: использование NavigationMenuLink напрямую вместо вложения в Link */}
+              <NavigationMenuLink asChild>
+                <Link to="/cybersport" className={cn(
                   "flex items-center px-4 py-2 text-white hover:text-[#D6BCFA] transition-colors"
                 )}>
                   <GamepadIcon className="mr-1 h-4 w-4" />
                   Киберспорт
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             
             <NavigationMenuItem>
